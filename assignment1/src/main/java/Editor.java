@@ -9,7 +9,7 @@ public class Editor extends JFrame {
 
     public Editor()
     {
-        super("简记");
+        super("text editor");
 
         Action[] actions=			//菜单项的各种功能
                 {
@@ -35,9 +35,9 @@ public class Editor extends JFrame {
     private JMenuBar createJMenuBar(Action[] actions)	//创建菜单栏的函数
     {
         JMenuBar menubar=new JMenuBar();
-        JMenu menuFile=new JMenu("文件(F)");
-        JMenu menuEdit=new JMenu("编辑(E)");
-        JMenu menuAbout=new JMenu("帮助(H)");
+        JMenu menuFile=new JMenu("File");
+        JMenu menuEdit=new JMenu("Editor");
+        JMenu menuAbout=new JMenu("Help");
         menuFile.add(new JMenuItem(actions[0]));
         menuFile.add(new JMenuItem(actions[1]));
         menuFile.add(new JMenuItem(actions[2]));
@@ -57,7 +57,7 @@ public class Editor extends JFrame {
     {
         public NewAction()
         {
-            super("新建(N)     Ctrl+N");
+            super("New     Ctrl+N");
         }
         public void actionPerformed(ActionEvent e)
         {
@@ -69,7 +69,7 @@ public class Editor extends JFrame {
     {
         public OpenAction()
         {
-            super("打开(O)     Ctrl+O");
+            super("Open     Ctrl+O");
         }
         public void actionPerformed(ActionEvent e)
         {
@@ -94,7 +94,7 @@ public class Editor extends JFrame {
     {
         public SaveAction()
         {
-            super("保存(S)     Ctrl+S");
+            super("Save     Ctrl+S");
         }
         public void actionPerformed(ActionEvent e)
         {
@@ -119,7 +119,7 @@ public class Editor extends JFrame {
     {
         public ExitAction()
         {
-            super("退出(X)");
+            super("Exit");
         }
         public void actionPerformed(ActionEvent e)
         {
@@ -131,7 +131,7 @@ public class Editor extends JFrame {
     {
         public CutAction()
         {
-            super("剪切(T)     Ctrl+X");
+            super("Cut     Ctrl+X");
         }
         public void actionPerformed(ActionEvent e)
         {
@@ -143,7 +143,7 @@ public class Editor extends JFrame {
     {
         public CopyAction()
         {
-            super("复制(C)     Ctrl+C");
+            super("Copy     Ctrl+C");
         }
         public void actionPerformed(ActionEvent e)
         {
@@ -155,7 +155,7 @@ public class Editor extends JFrame {
     {
         public PasteAction()
         {
-            super("粘贴(P)     Ctrl+V");
+            super("Paste     Ctrl+V");
         }
         public void actionPerformed(ActionEvent e)
         {
@@ -167,11 +167,11 @@ public class Editor extends JFrame {
     {
         public AboutAction()
         {
-            super("关于简记(A)");
+            super("About");
         }
         public void actionPerformed(ActionEvent e)
         {
-            JOptionPane.showMessageDialog(Editor.this,"实现了记事本的一些基本功能","关于",JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(Editor.this,"Some basic functions of notepad are realized","About",JOptionPane.PLAIN_MESSAGE);
         }
     }
 
@@ -179,11 +179,11 @@ public class Editor extends JFrame {
     {
         public HelpAction()
         {
-            super("联系开发者");
+            super("Contect the author");
         }
         public void actionPerformed(ActionEvent e)
         {
-            JOptionPane.showMessageDialog(Editor.this,"cpeng2424@gmail.com","开发者邮箱",JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(Editor.this,"850696481@qq.com","Email ",JOptionPane.PLAIN_MESSAGE);
         }
     }
 
